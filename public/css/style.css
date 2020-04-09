@@ -1,0 +1,357 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css";
+
+/*Root Var*/ 
+:root {
+    --body: rgba(151, 34, 194, 0.925);
+    --background: rgba(208, 113, 243, 0.925);
+    --primary: rgb(83, 218, 228);
+    --secondary: rgb(226, 23, 158);
+}
+
+/*All*/
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--body);
+}
+
+h1, h2, h3  {
+    color: var(--secondary);
+    margin: 0;
+    text-align: center;
+    font-family: Lobster, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+/* Navbar */
+
+nav {
+    padding: 3px;
+    background-color: var(--primary);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.12),
+      0px 3px 1px -2px rgba(0, 0, 0, 0.12), 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Container */
+.container {
+    min-height: 100%;
+}
+    
+* html .container {
+    height: 100%;
+}
+
+.container {
+    position: relative;
+}
+
+/*Heart*/
+#heart {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 20px;
+    width: 100%;
+    height: 500px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.12),
+      0px 3px 1px -2px rgba(0, 0, 0, 0.12), 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.heart {
+    animation: animateHeart 1s 0s infinite;
+    margin-top: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--primary);
+    box-shadow: 100px #000;
+    height: 200px;
+    transform: rotate(-45deg);
+    width: 200px;
+    position: relative;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    animation: animateHeart 1s 0s infinite;
+    background-color: var(--primary);
+    border-radius: 50%;
+    height: 200px;
+    position: absolute;
+    width: 200px;
+}
+
+.heart:before {
+    top: -100px;
+}
+
+.heart:after {
+    left: 100px;
+}
+
+@keyframes animateHeart {
+    0% {
+        height: 200px; 
+        width: 200px;
+    }
+    25% {
+        height: 205px; 
+        width: 205px;
+    }
+    50% {
+        height: 210px; 
+        width: 210px;
+    }
+    75% {
+        height: 215px; 
+        width: 215px;
+    }
+    100% {
+        height: 220px; 
+        width: 220px;
+    } 
+}
+
+/* Player */
+.musicContent {
+    width: 100%;
+    font-family: "Comic Neue", Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px 10px 0 0 ;
+    padding-top: 5px;
+    background-color: var(--primary);
+    color: var(--body);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.12),
+      0px 3px 1px -2px rgba(0, 0, 0, 0.12), 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+#vol-control {
+    display: inline-block;
+    width: 100px;
+}
+
+#info {
+    margin: 5px;
+}
+
+#play {
+    color: var(--secondary);
+    font-size: 50px;
+}
+
+#time-control {
+    display: inline-block;
+    width: 500px;
+}
+
+/* CONTENT */
+
+.card {
+    margin-top: 10%;
+    width: 100%;
+    height: 400px;
+    background-color: var(--primary);
+    margin-bottom: 0;
+}
+
+.card h2, p {
+    font-family: "Comic Neue", Arial, Helvetica, sans-serif;
+    color: var(--secondary);
+}
+
+.card p {
+    text-align: justify;
+    font-size: 20px;
+}
+
+#next {
+    color: var(--primary);
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: .9em;
+    font-family: Lobster, 'Times New Roman', Times, serif;
+    background-color: var(--body);
+}
+
+#next:hover {
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+audio {
+    width: 100%;
+    margin-top: 30px;
+}
+  
+#play-pause {
+    background-color: var(--secondary);
+}
+
+#mute {
+    color: var(--secondary);
+    transform: translateY(2px);
+}
+
+
+/* Seekbar */
+
+input[type="range"]::-webkit-slider-thumb {
+    background-color: var(--secondary);
+}
+  
+input[type="range"]::-moz-range-thumb {
+    background-color: var(--secondary);
+}
+
+input[type="range"]::-ms-thumb {
+    background-color: var(--secondary);
+}
+
+/*Medias queries*/
+
+@media only screen and (min-width: 320px) {
+    #info h5 {
+        font-size: 15px;
+    }
+
+    #info p {
+        font-size: 12px;
+    }
+
+    .musicContent {
+        bottom: -550px;
+    }
+    
+    #vol-control {
+        display: none;
+    }
+    
+    #time-control {
+        display: inline-block;
+        width: 80px;
+    }
+    #next {
+        font-size: .1.6em; 
+        margin: 1%;
+    }
+
+    .card{
+        height: 900px;
+    }
+
+    .container{
+        height: 200px;
+    }
+
+    .card h2,
+    .card p {
+        width: 100%;
+        font-size: .1.6em;
+    }
+}
+
+@media only screen and (min-width: 500px){
+    #info h5 {
+        font-size: 15px;
+    }
+
+    #info p {
+        font-size: 12px;
+    }
+
+    .musicContent {
+        bottom: -300px;
+    }
+    
+    #vol-control {
+        display: none;
+        width: 95px;
+    }
+    
+    #time-control {
+        display: inline-block;
+        width: 100px;
+    }
+
+    #next {
+        font-size: .1.6em; 
+        margin: 1%;
+    }
+
+    .card{
+        height: 800px;
+    }
+
+    .container{
+        height: 200px;
+    }
+
+    .card h2,
+    .card p {
+        width: 100%;
+        font-size: .1.6em;
+    }
+}
+
+@media screen and (min-width: 768px) { 
+    #info h5 {
+        font-size: 20px;
+    }
+
+    #info p {
+        font-size: 14px;
+    }
+    
+    .musicContent {
+        bottom: -110px;
+    }
+    
+    #vol-control {
+        display: none;
+    }
+    
+    #time-control {
+        display: inline-block;
+        width: 200px;
+    }
+
+    .card{
+        height: 500px;
+    }
+
+    .container{
+        height: 200px;
+    }
+
+    .card p {
+        width: 100%;
+        font-size: .2.6em;
+    }
+}
+
+@media screen and (min-width: 1280px) { 
+    #vol-control {
+        display: inline-block;
+    }
+    .card{
+        height: 400px;
+    }
+
+    .container{
+        height: 100px;
+    }
+
+    .card p {
+        width: 100%;
+        font-size: 20px;
+    }
+}

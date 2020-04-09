@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uma simples declaração</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&family=Pacifico&family=Comic+Neue:ital,wght@1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <h2>Olá, Tudo bem!?</h2>
+    </nav>
+
+    <section id="heart">
+        <div class="heart"></div>
+    </section>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-content" id="content">
+                <div class="card-title">
+                    <h2 id="title">Como nos conhecemos</h2>
+                </div>
+                <p id="body">
+                    &nbsp;&nbsp;Eros leo lobortis et bibendum quisque aliquet adipiscing aenean, semper fusce congue dolor gravida bibendum primis suscipit, imperdiet fermentum varius praesent malesuada sociosqu pulvinar. torquent per ultricies lacinia egestas nisi interdum lectus amet urna inceptos pellentesque, mollis mattis vulputate etiam in dictum potenti ultricies etiam sed. nisi varius nibh risus porta per dictumst mi fringilla convallis luctus leo inceptos, lacinia ultricies volutpat luctus eleifend ut ultricies enim sodales fringilla. etiam quisque posuere lacinia facilisis placerat, platea augue blandit sed nibh cursus, platea viverra nulla arcu.
+                </p>
+                <br>
+                <a id="next">Clique aqui para ir para o próximo!</a>
+                <input type="hidden" value="0" id="cont">
+            </div>
+        </div>
+        
+        <div class="musicContent">
+            <div id="info"> 
+                <h5>title</h5>
+                <p class="artist">Artist</p>
+            </div>
+        
+            <div class="row valign-wrapper">
+                <a href="#">
+                    <i class="material-icons" id="play">play_arrow</i>
+                </a>
+
+                <div class="col s2" id="current-duration">00:00</div>
+
+                <div class="col s6 range-field valign-wrapper">
+                    <input type="range" min="0" max="0" id="seekbar" step="1">
+                </div>
+
+                <div class="col s2" id="total-duration">00:00</div>
+
+                <a href="#">
+                    <i class="material-icons" id="mute">volume_up</i>
+                </a>
+
+                <div class="col s2 range-field valign-wrapper"> 
+                    <input type="range" id="vol-control" min="0" max="100" step="1">
+                </div>
+            </div>
+    </div>  
+</body>
+<script src="public/js/index.js"></script>
+<script src="public/js/modules.js" type="module"></script>
+</html>
