@@ -10,7 +10,7 @@
 > ### Como adicionar novas músicas?
 > * Vá até a pasta `public/js`, e abra o arquivo `utils.js`;
 > * Neste arquivo estou exportando um array para o arquivo `player.js`, neste array é aonde que ficará o title (Nome da música), artist (Artista/Banda que está tocando está música) e o arquivo de música (este arquivo deve estar na pasta `public/audio`, o mesmo nome do arquivo tem que ser referido na array.
-> #### Obs: a cada final de inserção de dados na array se deve fechar chaves e adicionar a vírgula (lembrando que na última camada de dados não se deve colocar a vírgula
+> #### Obs: a cada final de inserção de dados no array se deve fechar chaves e adicionar a vírgula (lembrando que na última camada de dados não se deve colocar a vírgula).
 
 > ### Como alterar os textos?
 > * No `index.html` vá atá a `<DIV>` com `class="card-content"` e altere o primeiro texto que você quer que apareça;
